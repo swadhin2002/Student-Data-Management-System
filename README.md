@@ -30,7 +30,7 @@
 ### 2) Setup
 1. *Clone the Repository:*
     bash
-    git clone https://github.com/RudraPrasad07/School-Data-Management-System.git
+    https://github.com/swadhin2002/Student-Data-Management-System.git
     
 2. *Navigate to the Project Directory:*
     bash
@@ -109,15 +109,15 @@ You can explore and test the APIs using Swagger (if integrated) or tools like Po
 - *Method*: POST
 - *URL*: http://localhost:8080/students
 
-- *Body*:
+- *Body*:<br>
 json
 {
-    "name": "Name",
-    "dob": "DOB",
-    "gender": "Gender",
-    "email": "Email",
-    "password": "Password",
-    "phoneno": "PhoneNumber"
+   <br> "name": "Name",<br>
+    "dob": "DOB",<br>
+    "gender": "Gender",<br>
+    "email": "Email",<br>
+    "password": "Password",<br>
+    "phoneno": "PhoneNumber"<br>
 }
 
 ### 5) Database Configuration
@@ -127,11 +127,11 @@ To use MySQL, update the application.properties file with the following configur
 
 properties
 # MySQL Database Configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name <br>
+spring.datasource.username=your_username <br>
+spring.datasource.password=your_password <br>
+spring.jpa.hibernate.ddl-auto=update <br>
+spring.jpa.show-sql=true <br>
 
 ### 6) Testing
  - *Run tests using the following Maven command:*
