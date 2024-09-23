@@ -28,78 +28,81 @@
 4. *IDE:* A Java Integrated Development Environment (IDE) like Eclipse, IntelliJ IDEA, or VSCode can help you manage and run the project efficiently.
 
 ### 2) Setup
-1. *Clone the Repository:*
-    bash
+1. **Clone the Repository:**
+
+   ```bash
     https://github.com/swadhin2002/Student-Data-Management-System.git
-    
-2. *Navigate to the Project Directory:*
-    bash
+    ```
+3. **Navigate to the Project Directory:**
+
+   ``` bash
     cd School-Data-Management-System
-    
-3. *Configure Database:*
-   Update src/main/resources/application.properties with your MySQL database details:
-    properties
+    ```
+4. **Configure Database:**
+   Update``` src/main/resources/application.properties``` with your MySQL database details:
+   
+   ```properties
     spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
     spring.datasource.username=your_username
     spring.datasource.password=your_password
     
-4. *Build the Project:*
-    bash
+5. **Build the Project:**
+   ``` bash
     mvn clean install
-    
-5. *Run the Application:*
-    bash
+    ```
+6. **Run the Application:**
+   ``` bash
     mvn spring-boot:run
 
 ### 3) Running the Application
 Once the application is up and running, you can access the REST API through the following endpoints:
 
 #### AddressController
-- *PUT /address/updateaddress/{id}:* Update the address information for the given ID. Requires the ID as a path variable and the updated details.
-- *GET /address/fetch/{id}:* Retrieve the address information for the given ID. Requires the ID as a path variable.
+- **PUT /address/updateaddress/{id}:** Update the address information for the given ID. Requires the ID as a path variable and the updated details.
+- **GET /address/fetch/{id}:** Retrieve the address information for the given ID. Requires the ID as a path variable.
 
 #### ClassController
-- *POST /class/save:* Create and save a new class. Returns the details of the created class.
-- *PUT /class/update/{id}:* Update an existing class by its ID.
-- *GET /class/fetch/{id}:* Retrieve a class by its ID.
-- *GET /class/fetchByYear/{year}:* Retrieve a list of classes by the academic year.
-- *DELETE /class/delete/{id}:* Delete a class by its ID.
-- *DELETE /class/deleteByYear/{year}:* Delete all classes associated with the given academic year.
+- **POST /class/save:** Create and save a new class. Returns the details of the created class.
+- **PUT /class/update/{id}:** Update an existing class by its ID.
+- **GET /class/fetch/{id}:** Retrieve a class by its ID.
+- **GET /class/fetchByYear/{year}:** Retrieve a list of classes by the academic year.
+- **DELETE /class/delete/{id}:** Delete a class by its ID.
+- **DELETE /class/deleteByYear/{year}:** Delete all classes associated with the given academic year.
 
 #### MarksController
-- *POST /Mark/save:* Create and save a new mark. Requires studentId and subjectID as query parameters.
-- *PUT /Mark/updateMark/{id}:* Update an existing mark by ID.
-- *GET /Mark/fetchBymarkByID/{id}:* Retrieve a mark by its ID.
-- *GET /Mark/fetchMarkByStudentId/{Id}:* Retrieve all marks by student ID.
-- *GET /Mark/fetchMarkBySubjectId/{Id}:* Retrieve all marks by subject ID.
-- *DELETE /Mark/deleteById/{Id}:* Delete a mark by its ID.
+- **POST /Mark/save:** Create and save a new mark. Requires studentId and subjectID as query parameters.
+- **PUT /Mark/updateMark/{id}:** Update an existing mark by ID.
+- **GET /Mark/fetchBymarkByID/{id}:** Retrieve a mark by its ID.
+- **GET /Mark/fetchMarkByStudentId/{Id}:** Retrieve all marks by student ID.
+- **GET /Mark/fetchMarkBySubjectId/{Id}:** Retrieve all marks by subject ID.
+- **DELETE /Mark/deleteById/{Id}:** Delete a mark by its ID.
 
 #### StudentController
-- *POST /student/save:* Create and save a new student record.
-- *PUT /student/Update/{id}:* Update an existing student by ID.
-- *GET /student/fetchById/{id}:* Retrieve a student by ID.
-- *GET /student/fetchByNumber/{number}:* Retrieve a student by phone number.
-- *GET /student/fetchstudentByclassName/{classname}:* Retrieve students by class name.
-- *DELETE /student/deleteStudentByID/{id}:* Delete a student by ID.
-- *DELETE /student/deleteStudentByNumber/{number}:* Delete a student by phone number.
+- **POST /student/save:** Create and save a new student record.
+- **PUT /student/Update/{id}:** Update an existing student by ID.
+- **GET /student/fetchById/{id}:** Retrieve a student by ID.
+- **GET /student/fetchByNumber/{number}:** Retrieve a student by phone number.
+- **GET /student/fetchstudentByclassName/{classname}:** Retrieve students by class name.
+- **DELETE /student/deleteStudentByID/{id}:** Delete a student by ID.
+- **DELETE /student/deleteStudentByNumber/{number}:** Delete a student by phone number.
 
 #### SubjectController
-- *GET /subject/fetch/{id}:* Retrieve a specific subject by ID.
-- *GET /subject/fetchBycode/{code}:* Retrieve a specific subject by subject code.
-- *GET /subject/fetchByclassname/{className}:* Retrieve all subjects by class name.
-- *GET /subject/fetchSubjecByStudentID/{sID}:* Retrieve all subjects associated with a specific student ID.
-- *POST /subject/SaveSubject/{className}:* Create a new subject and associate it with the specified class name.
-- *PUT /subject/Update/{id}:* Update a subject by ID.
-- *DELETE /subject/deleteSubjecByID/{id}:* Delete a subject by ID.
+- **GET /subject/fetch/{id}:** Retrieve a specific subject by ID.
+- **GET /subject/fetchBycode/{code}:** Retrieve a specific subject by subject code.
+- **GET /subject/fetchByclassname/{className}:** Retrieve all subjects by class name.
+- **GET /subject/fetchSubjecByStudentID/{sID}:** Retrieve all subjects associated with a specific student ID.
+- **POST /subject/SaveSubject/{className}:** Create a new subject and associate it with the specified class name.
+- **PUT /subject/Update/{id}:** Update a subject by ID.
+- **DELETE /subject/deleteSubjecByID/{id}:** Delete a subject by ID.
 
 #### TeacherController
-- *GET /teacher/fetchByName/{Classname}:* Retrieve all teachers by class name.
-- *GET /teacher/fetch/{id}:* Retrieve a specific teacher by ID.
-- *GET /teacher/fetchByNumber/{number}:* Retrieve a specific teacher by phone number.
-- *POST /teacher/saveteacher:* Create a new teacher.
-- *PUT /teacher/UpdateTeacher/{id}:* Update teacher information.
-- *DELETE /teacher/delete/{id}:* Delete a teacher by ID.
-- *DELETE /teacher/DeleteByNumber/{Number}:* Delete a teacher by phone number.
+- **GET /teacher/fetchByName/{Classname}:** Retrieve all teachers by class name.
+- **GET /teacher/fetch/{id}:** Retrieve a specific teacher by ID.
+- **GET /teacher/fetchByNumber/{number}:** Retrieve a specific teacher by phone number.
+- **POST /teacher/saveteacher:** Create a new teacher.
+- **PUT /teacher/UpdateTeacher/{id}:** Update teacher information.
+- **DELETE /teacher/delete/{id}:** Delete a teacher by ID.
+- **DELETE /teacher/DeleteByNumber/{Number}:** Delete a teacher by phone number.
   
 ### 4) API Documentation
 You can explore and test the APIs using Swagger (if integrated) or tools like Postman. Below is an example of a sample API request in Postman:
@@ -107,37 +110,38 @@ You can explore and test the APIs using Swagger (if integrated) or tools like Po
 ### Sample API Request
 
 - *Method*: POST
-- *URL*: http://localhost:8080/students
+- *URL*:``` http://localhost:8080/students```
 
-- *Body*:<br>
-json
+- *Body*:
+```json
 {
-   <br> "name": "Name",<br>
-    "dob": "DOB",<br>
-    "gender": "Gender",<br>
-    "email": "Email",<br>
-    "password": "Password",<br>
-    "phoneno": "PhoneNumber"<br>
+    "name": "Name",
+    "dob": "DOB",
+    "gender": "Gender",
+    "email": "Email",
+    "password": "Password",
+    "phoneno": "PhoneNumber"
 }
-
+```
 ### 5) Database Configuration
 ### Switching to MySQL
 
-To use MySQL, update the application.properties file with the following configuration:
+To use MySQL, update the ```application.properties``` file with the following configuration:
 
-properties
+```properties
 # MySQL Database Configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name <br>
-spring.datasource.username=your_username <br>
-spring.datasource.password=your_password <br>
-spring.jpa.hibernate.ddl-auto=update <br>
-spring.jpa.show-sql=true <br>
-
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name 
+spring.datasource.username=your_username 
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true 
+```
 ### 6) Testing
  - *Run tests using the following Maven command:*
-    bash
+
+    ``` bash
     mvn test
-    
+    ```
     
 ###  **Contributing**
    Feel free to contribute or provide feedback. Your support is greatly appreciated!
